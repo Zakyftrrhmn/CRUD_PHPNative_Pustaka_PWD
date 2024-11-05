@@ -41,6 +41,13 @@
         </li>
 
         <li class="nav-item">
+          <a href="<?= base_url; ?>/barang" class="nav-link" aria-label="Kategori">
+            <i class="nav-icon fas fa-box"></i>
+            <p>Barang</p>
+          </a>
+        </li>
+
+        <li class="nav-item">
           <a href="<?= base_url; ?>/user" class="nav-link" aria-label="User">
             <i class="nav-icon fas fa-user"></i>
             <p>User</p>

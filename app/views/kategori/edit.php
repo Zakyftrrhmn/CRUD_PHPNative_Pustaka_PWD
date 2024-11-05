@@ -27,6 +27,11 @@
                         <input type="text" class="form-control" placeholder="masukkan kategori..."
                             name="nama_kategori" value="<?= $data['kategori']['nama_kategori']; ?>">
                     </div>
+                    <div class="form-group">
+                        <label>Deskripsi</label>
+                        <input type="text" class="form-control" placeholder="masukkan kategori..."
+                            name="deskripsi" value="<?= $data['kategori']['deskripsi']; ?>">
+                    </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">

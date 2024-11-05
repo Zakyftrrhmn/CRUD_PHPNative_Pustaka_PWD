@@ -26,9 +26,10 @@ class KategoriModel
 
     public function tambahKategori($data)
     {
-        $query = "INSERT INTO kategori (nama_kategori) values (:nama_kategori)";
+        $query = "INSERT INTO kategori (nama_kategori, deskripsi) values (:nama_kategori, :deskripsi)";
         $this->db->query($query);
         $this->db->bind('nama_kategori', $data['nama_kategori']);
+        $this->db->bind('deskripsi', $data['deskripsi']);
         $this->db->execute();
 
         return $this->db->rowCount();
@@ -36,10 +37,11 @@ class KategoriModel
 
     public function updateDataKategori($data)
     {
-        $query = "UPDATE kategori SET nama_kategori=:nama_kategori WHERE id=:id";
+        $query = "UPDATE kategori SET nama_kategori=:nama_kategori, deskripsi=:deskripsi WHERE id=:id";
         $this->db->query($query);
         $this->db->bind('id', $data['id']);
         $this->db->bind('nama_kategori', $data['nama_kategori']);
+        $this->db->bind('deskripsi', $data['deskripsi']);
         $this->db->execute();
 
         return $this->db->rowCount();
@@ -57,7 +59,7 @@ class KategoriModel
     public function cariKategori()
     {
         $key = $_POST['key'];
-        $this->db->query("SELECT * FROM " . $this->table . " WHERE nama_kategori LIKE :key");
+        $this->db->query("SELECT * FROM " . $this->table . "  WHERE nama_kategori LIKE :key OR deskripsi LIKE :key");
         $this->db->bind('key', "%$key%");
 
         return $this->db->resultSet();

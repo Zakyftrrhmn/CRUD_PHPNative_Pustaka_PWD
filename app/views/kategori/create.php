@@ -25,6 +25,10 @@
                         <label>Nama Kategori</label>
                         <input type="text" class="form-control" placeholder="masukkan kategori..." name="nama_kategori">
                     </div>
+                    <div class="form-group">
+                        <label>Deskripsi</label>
+                        <input type="text" class="form-control" placeholder="masukkan Deskripsi..." name="deskripsi">
+                    </div>
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
